@@ -7,7 +7,7 @@ Specify what you want it to build, the AI asks for clarification, and then build
 #### Free-GPT-Engineer is made to be easy to adapt, extend, and make your agent learn how you want your code to look. It generates an entire codebase based on a prompt.
 It **absolutely FREE.** You don't need to using Openai API Key.
 
-This project based on the [GPT-Engineer repository](https://github.com/AntonOsika/gpt-engineer), version **0.0.6**
+This project based on the [GPT-Engineer repository](https://github.com/AntonOsika/gpt-engineer), version **0.0.7**
 
 ## Project philosophy
 - Simple to get value

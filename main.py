@@ -7,12 +7,11 @@ from gpt_engineer.steps import STEPS
 
 app = typer.Typer()
 
-
 @app.command()
 def main(
     project_path: str = typer.Argument("example", help="path"),
     delete_existing: bool = typer.Argument(False, help="delete existing files"),
-    model: str = "gpt-3.5-turbo",
+    model: str = typer.Argument("gpt-3.5-turbo", help="model id string"),
     temperature: float = 0.1,
     steps_config: steps.Config = typer.Option(
         steps.Config.DEFAULT, "--steps", "-s", help="decide which steps to run"
@@ -50,9 +49,11 @@ def main(
         preprompts=DB(Path(__file__).parent / "preprompts"),
     )
 
-    for step in STEPS[steps_config]:
+    steps = STEPS[steps_config]
+    for step in steps:
         messages = step(ai, dbs)
         dbs.logs[step.__name__] = json.dumps(messages)
+    
 
 
 if __name__ == "__main__":

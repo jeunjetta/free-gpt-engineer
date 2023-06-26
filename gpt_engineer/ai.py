@@ -70,6 +70,7 @@ class AI:
 
         print(response)
         print()
-        messages = messages + [{"role": "assistant", "content": response}]
+        messages += [{"role": "assistant", "content": response}]
         logger.debug(f"Chat completion finished: {messages}")
         return messages
+

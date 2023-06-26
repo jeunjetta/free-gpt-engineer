@@ -27,7 +27,7 @@ For installing **Free-GPT-Engineer** run this commands:
 
 **Run**:
 - Create an empty folder inside the repo, in **projects** folder.
-- Fill in the `main_prompt` file in your new folder
+- Fill in the `prompt` file in your new folder
 - Run command `python main.py projects/new_folder`
 
 **Results**
